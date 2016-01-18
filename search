@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Edi Amin <to.ediamin@gmail.com>
+# Search files in the current directory containing string using grep
+# usage:
+# search mystring
+# search -i php mystring // search only in php files
+# search -i js mystring // search only in js files
+
+while getopts "i:" OPTION
+do
+    case $OPTION in
+        i)
+			grep -nr --color --include=\*${OPTARG} ${3} .
+			exit;
+    esac
+done
+
+grep -nr --color $1 .
