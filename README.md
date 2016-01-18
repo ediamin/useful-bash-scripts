@@ -7,8 +7,7 @@ chmod +x SCRIPTNAME
 ```
 
 ## search
-Search files in the current directory containing string using grep
-usage:
+Search files in the current directory containing string using `grep`
 ```bash
 search mystring
 ```
